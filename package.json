@@ -4,7 +4,6 @@
   "description": "Start boilerplate for static markup",
   "main": "index.js",
   "type": "module",
-  "private": true,
   "scripts": {
     "gulp": "cross-env NODE_ENV=development gulp",
     "build": "cross-env NODE_ENV=production gulp build",
@@ -13,8 +12,7 @@
     "styleLintFix": "stylelint \"./src/styles/**/*.pcss\" --fix",
     "eslint": "eslint \"./src/scripts/**/*.js\"",
     "eslintFix": "eslint \"./src/scripts/**/*.js\" --fix",
-    "test": "yarn pugLint && yarn styleLint && yarn eslint",
-    "postinstall": "husky install"
+    "test": "yarn pugLint && yarn styleLint && yarn eslint"
   },
   "repository": {
     "type": "git",
