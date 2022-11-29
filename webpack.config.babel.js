@@ -1,10 +1,9 @@
 import TerserPlugin from 'terser-webpack-plugin';
-import {isProdMode} from './gulp/gulp.config.js';
+import { isProdMode } from './gulp/gulp.config.js';
 
 export default {
   entry: {
     index: './src/scripts/index.js',
-    about: './src/scripts/about.js',
   },
 
   output: {
