@@ -17,6 +17,7 @@
           "/^svg-/"
         ]
       }
-    ]
+    ],
+    "selector-class-pattern": null
   }
 }

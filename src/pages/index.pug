@@ -5,3 +5,46 @@ block variables
 
 block content
   main.main
+    .container
+      section.greeting.box
+        button.greeting__btn.btn Start Quiz
+      section.info.box
+        header.info__title Some Rules of this Quiz
+        ul.info__list
+          li.info__list-item
+            | 1. You will have only
+            span 15 seconds
+            | per each question.
+          li.info__list-item 2. After you check an answer, it can't be undone.
+          li.info__list-item 3. You can't select any option once time goes off.
+          li.info__list-item 4. You can't exit from the Quiz while you're playing.
+          li.info__list-item 5. You'll get points on the basis of your correct answers.
+        footer.info__actions 
+          button.btn.quit.info__btn Quit Quiz
+          button.btn.start.info__btn Continue
+      section.quiz.card.box.active
+        header.quiz__header 
+          .quiz__header-text Awesome Quiz Application
+          .timer
+            .timer__text Time Left
+            .timer__time 15
+          .timeline.quiz__timeline 
+        .quiz__body
+          .quiz__question Some text here for css styling 
+          ul.quiz__ans-list
+            li.quiz-ans-list-item Some text for css styling
+        footer.quiz__reaction 
+          .quiz__result
+            |
+            span.quiz__que-passed 2
+            | of 
+            span.quiz__que-count 5
+            | Questions
+          button.btn.quiz__btn-next Next Que
+      section.result.box.card
+        .result__info 
+          .result__text You've completed the Quiz!
+          .result__score Your score is 25%
+        .result__actions
+          button.btn.start Replay Quiz
+          button.btn.quit Quit Quiz
