@@ -1,13 +1,28 @@
+:root {
+  --primary: #0d6efd;
+  --secondary: #6c757d;
+  --success: #198754;
+  --warning: #ffc107;
+  --info: #0dcaf0;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #212529;
+
+  & .dark {
+    --primary: purple;
+  }
+}
+
 $mediaWidthMobile: 320px;
 $mediaWidthTablet: 768px;
 $mediaWidthTabletHorizontal: 1024px;
 $mediaWidthLaptop: 1366px;
 
-$primary: #0d6efd;
-$secondary: #6c757d;
-$success: #198754;
-$warning: #ffc107;
-$info: #0dcaf0;
-$danger: #dc3545;
-$light: #f8f9fa;
-$dark: #212529;
+$primary: var(--primary);
+$secondary: var(--secondary);
+$success: var(--success);
+$warning: var(--warning);
+$info: var(--info);
+$danger: var(--danger);
+$light: var(--light);
+$dark: var(--dark);
