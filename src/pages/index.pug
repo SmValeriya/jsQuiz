@@ -6,7 +6,7 @@ block variables
 block content
   main.main
     .container
-      section.greeting.box
+      section.greeting.box.active
         button.greeting__btn.btn Start Quiz
       section.info.box
         header.info__title Some Rules of this Quiz
@@ -20,31 +20,34 @@ block content
           li.info__list-item 4. You can't exit from the Quiz while you're playing.
           li.info__list-item 5. You'll get points on the basis of your correct answers.
         footer.info__actions 
-          button.btn.quit.info__btn Quit Quiz
-          button.btn.start.info__btn Continue
-      section.quiz.card.box.active
+          button.btn.quit.info__btn-quit Quit Quiz
+          button.btn.start.info__btn-start Continue
+      section.quiz.card.box
         header.quiz__header 
           .quiz__header-text Awesome Quiz Application
           .timer
             .timer__text Time Left
-            .timer__time 15
+            .timer__time
           .timeline.quiz__timeline 
         .quiz__body
-          .quiz__question Some text here for css styling 
+          .quiz__question
           ul.quiz__ans-list
-            li.quiz-ans-list-item Some text for css styling
         footer.quiz__reaction 
           .quiz__result
             |
-            span.quiz__que-passed 2
+            span.quiz__que-passed 1
             | of 
-            span.quiz__que-count 5
+            span.quiz__que-count
             | Questions
           button.btn.quiz__btn-next Next Que
+          button.btn.quiz__btn-result Show results
       section.result.box.card
+        .result__icon
+          svg
+            use(href="./images/sprite.svg#crown" fill="var(--primary)")
         .result__info 
           .result__text You've completed the Quiz!
           .result__score Your score is 25%
         .result__actions
-          button.btn.start Replay Quiz
-          button.btn.quit Quit Quiz
+          button.btn.result__btn-start Replay Quiz
+          button.btn.result__btn-quit Quit Quiz

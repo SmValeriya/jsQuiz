@@ -31,9 +31,13 @@
 
 .quiz__ans-list {
   padding: 20px 0;
+
+  &.disable {
+    pointer-events: none;
+  }
 }
 
-.quiz-ans-list-item {
+.quiz__ans-list-item {
   background: aliceblue;
   border: 1px solid #84c5fe;
   border-radius: 5px;
@@ -109,4 +113,8 @@
 .quiz__que-passed,
 .quiz__que-count {
   font-weight: 600;
+}
+
+.quiz__btn-result {
+  display: none;
 }
