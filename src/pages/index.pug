@@ -6,9 +6,9 @@ block variables
 block content
   main.main
     .container
-      section.greeting.box.active
+      section.section.greeting.active
         button.greeting__btn.btn Start Quiz
-      section.info.box
+      section.section.info.box
         header.info__title Some Rules of this Quiz
         ul.info__list
           li.info__list-item
@@ -20,9 +20,9 @@ block content
           li.info__list-item 4. You can't exit from the Quiz while you're playing.
           li.info__list-item 5. You'll get points on the basis of your correct answers.
         footer.info__actions 
-          button.btn.quit.info__btn-quit Quit Quiz
-          button.btn.start.info__btn-start Continue
-      section.quiz.card.box
+          button.btn.quit.info__btn.info__btn-quit Quit Quiz
+          button.btn.start.info__btn.info__btn-start Continue
+      section.section.quiz.box
         header.quiz__header 
           .quiz__header-text Awesome Quiz Application
           .timer
@@ -41,7 +41,7 @@ block content
             | Questions
           button.btn.quiz__btn-next Next Que
           button.btn.quiz__btn-result Show results
-      section.result.box.card
+      section.section.result.box.card
         .result__icon
           svg
             use(href="./images/sprite.svg#crown" fill="var(--primary)")

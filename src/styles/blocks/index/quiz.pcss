@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 3px 5px 1px rgb(0 0 0 / 10%);
+  box-shadow: 0 2px 3px 1px $bg-secondary;
 }
 
 .quiz__header-text {
@@ -21,7 +21,7 @@
 
 .quiz__body {
   padding: 20px 30px;
-  background-color: $light;
+  background-color: $bg-primary;
 }
 
 .quiz__question {
@@ -38,8 +38,7 @@
 }
 
 .quiz__ans-list-item {
-  background: aliceblue;
-  border: 1px solid #84c5fe;
+  border: 2px solid $bg-secondary;
   border-radius: 5px;
   padding: 8px 15px;
   font-size: 17px;
@@ -55,44 +54,38 @@
   }
 
   &:hover {
-    color: #004085;
-    background-color: #cce5ff;
-    border: 1px solid #b8daff;
+    filter: brightness(1.2);
+    border: 2px solid $primary;
   }
 
   &::after {
-    content: "";
     height: 26px;
     width: 26px;
     border-radius: 50%;
     border: 2px solid transparent;
-    text-align: center;
-    background-position: center;
-    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &.correct {
-    color: #155724;
-    background: #d4edda;
-    border: 1px solid #c3e6cb;
+    color: $success;
+    border: 2px solid $success;
   }
 
   &.incorrect {
-    color: #721c24;
-    background: #f8d7da;
-    border: 1px solid #f5c6cb;
+    color: $danger;
+    border: 2px solid $danger;
   }
 
   &.correct::after {
-    background-image: svg-load("tick.svg", fill=#155724);
-    background-size: 70%;
-    border-color: #155724;
+    content: "\2713";
+    border-color: $success;
   }
 
   &.incorrect::after {
-    background-image: svg-load("cross.svg", fill=#721c24);
-    background-size: 70%;
-    border-color: #721c24;
+    content: "\292B";
+    border-color: $danger;
   }
 }
 
@@ -102,7 +95,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid lightgrey;
+  box-shadow: 0 -2px 3px 1px $bg-secondary;
 }
 
 .quiz__result {

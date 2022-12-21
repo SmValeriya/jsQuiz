@@ -1,15 +1,22 @@
 :root {
   --primary: #0d6efd;
   --secondary: #6c757d;
-  --success: #198754;
+  --success: #007241;
   --warning: #ffc107;
   --info: #0dcaf0;
-  --danger: #dc3545;
-  --light: #f8f9fa;
-  --dark: #212529;
+  --danger: #d62f41;
+  --bg-secondary: #cfe2ff;
+  --bg-primary: #f8f9fa;
+  --text-color: #212529;
+  --text-color-light: #fff;
 
   & .dark {
-    --primary: purple;
+    --primary: #800080;
+    --text-color: #c9d1d9;
+    --success: #34935f;
+    --danger: #ed4652;
+    --bg-primary: #161b22;
+    --bg-secondary: #0d1117;
   }
 }
 
@@ -26,3 +33,7 @@ $info: var(--info);
 $danger: var(--danger);
 $light: var(--light);
 $dark: var(--dark);
+$bg-primary: var(--bg-primary);
+$bg-secondary: var(--bg-secondary);
+$text-color: var(--text-color);
+$text-color-light: var(--text-color-light);
