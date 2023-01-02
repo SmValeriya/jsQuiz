@@ -10,6 +10,7 @@ module.exports = (ctx) => {
         removeFill: true,
         paths: ['./src/images/icons']
       },
+      'postcss-mixins': {},
       'precss': {},
       'postcss-combine-media-query': ctx.env === 'production' ? {} : false,
       cssnano: ctx.env === 'production' ? {} : false

@@ -1,12 +1,60 @@
 .mode {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background-image: svg-load("moon.svg", fill=#ffffff);
   background-position: center;
   background-repeat: no-repeat;
   transition: background-image 0.2s ease-in-out;
+  transform-origin: top center;
+
+  &:hover {
+    animation: shake 6s linear infinite;
+  }
 }
 
 .dark .mode {
+  transform-origin: center;
   background-image: svg-load("sun.svg", fill=#ffffff);
+
+  &:hover {
+    animation: rotate 3s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: rotate(-12deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: rotate(12deg);
+  }
+
+  80% {
+    transform: rotate(7deg);
+  }
+
+  90% {
+    transform: rotate(-7deg);
+  }
 }

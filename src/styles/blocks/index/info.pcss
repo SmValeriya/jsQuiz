@@ -2,20 +2,21 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 30px;
+  position: relative;
+  padding: 30px min(4%, 30px);
   border-radius: 5px 5px 0 0;
-  font-size: 20px;
+  font-size: 1.4rem;
   font-weight: 600;
   box-shadow: 0 2px 3px 1px $bg-secondary;
 }
 
 .info__list {
-  padding: 30px;
+  padding: 30px min(4%, 30px);
   background-color: $bg-primary;
 }
 
 .info__list-item {
-  font-size: 17px;
+  font-size: 1rem;
 }
 
 .info__list-item:not(:last-child) {
@@ -26,8 +27,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 30px;
-  box-shadow: 0 -2px 3px 1px $bg-secondary;
+  padding: 30px min(4%, 30px);
 }
 
 .info__btn:not(:last-child) {

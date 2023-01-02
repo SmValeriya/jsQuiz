@@ -16,7 +16,19 @@ body {
 }
 
 html {
-  font-size: 16px;
+  font-size: 17px;
+}
+
+@mixin tablets {
+  html {
+    font-size: 16px;
+  }
+}
+
+@mixin phones {
+  html {
+    font-size: 14px;
+  }
 }
 
 body {
@@ -32,12 +44,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (max-width: 768px) {
-  html {
-    font-size: 14px;
-  }
-}
-
 .main {
   flex-grow: 1;
 }
@@ -45,19 +51,26 @@ body {
 .container {
   width: clamp(300px, 90%, 780px);
   height: 100%;
-  position: relative;
   margin: 0 auto;
 }
 
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .section {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: all 0.3s ease-in-out;
+  height: 0;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
 
   &.active {
-    transform: translate(-50%, -50%) scale(1);
+    height: auto;
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -86,6 +99,10 @@ img {
   height: auto;
   margin-left: auto;
   margin-right: auto;
+}
+
+svg {
+  max-width: 100%;
 }
 
 a,
