@@ -1,19 +1,19 @@
 @import url("../utils/variables");
 
-@mixin media-tablet {
-  @media (min-width: $mediaWidthTablet) {
+@mixin tablets() {
+  @media (max-width: $tablets) {
     @content ;
   }
 }
 
-@mixin media-tablet-horizontal {
-  @media (min-width: $mediaWidthTabletHorizontal) {
+@mixin phones() {
+  @media (max-width: $phones) {
     @content ;
   }
 }
 
-@mixin media-laptop {
-  @media (min-width: $mediaWidthLaptop) {
+@mixin minphones() {
+  @media (max-width: $minphones) {
     @content ;
   }
 }

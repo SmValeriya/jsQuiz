@@ -1,39 +1,32 @@
 :root {
   --primary: #0d6efd;
-  --secondary: #6c757d;
-  --success: #007241;
-  --warning: #ffc107;
-  --info: #0dcaf0;
-  --danger: #d62f41;
-  --bg-secondary: #cfe2ff;
   --bg-primary: #f8f9fa;
+  --bg-secondary: #cfe2ff;
   --text-color: #212529;
   --text-color-light: #fff;
+  --success: #007241;
+  --danger: #d62f41;
 
   & .dark {
     --primary: #800080;
+    --bg-primary: #161b22;
+    --bg-secondary: #0d1117;
     --text-color: #c9d1d9;
     --success: #34935f;
     --danger: #ed4652;
-    --bg-primary: #161b22;
-    --bg-secondary: #0d1117;
   }
 }
 
-$mediaWidthMobile: 320px;
-$mediaWidthTablet: 768px;
-$mediaWidthTabletHorizontal: 1024px;
-$mediaWidthLaptop: 1366px;
+$tablets: 768px;
+$phones: 480px;
+$minphones: 320px;
+
+$basefont: 16px;
 
 $primary: var(--primary);
-$secondary: var(--secondary);
-$success: var(--success);
-$warning: var(--warning);
-$info: var(--info);
-$danger: var(--danger);
-$light: var(--light);
-$dark: var(--dark);
 $bg-primary: var(--bg-primary);
 $bg-secondary: var(--bg-secondary);
 $text-color: var(--text-color);
 $text-color-light: var(--text-color-light);
+$success: var(--success);
+$danger: var(--danger);

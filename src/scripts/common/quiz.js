@@ -10,7 +10,7 @@ export function initializeQuiz() {
 
   questionIndex = 0;
   rightAnswersCount = 0;
-  quizCountBox.textContent = ' ' + questions.length;
+  quizCountBox.textContent = ` ${questions.length} `;
   quizBox.querySelector('.quiz__btn-result').style.display = 'none';
   renderQuestion(questionIndex);
   updateCountCurrentQuestion();

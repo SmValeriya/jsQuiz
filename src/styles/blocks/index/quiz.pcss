@@ -1,10 +1,10 @@
 .quiz__header {
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 30px;
   border-radius: 5px 5px 0 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   box-shadow: 0 2px 3px 1px $bg-secondary;
 }
 
@@ -38,16 +38,18 @@
 }
 
 .quiz__ans-list-item {
-  border: 2px solid $bg-secondary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid $bg-secondary;
   border-radius: 5px;
   padding: 8px 15px;
-  font-size: 17px;
   margin-bottom: 15px;
-  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  box-shadow: 1px 1px 3px 1px $bg-secondary;
   transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  cursor: pointer;
 
   &:last-child {
     margin-bottom: 0;
@@ -55,27 +57,29 @@
 
   &:hover {
     filter: brightness(1.2);
-    border: 2px solid $primary;
+    border-color: $primary;
   }
 
   &::after {
-    height: 26px;
+    content: "";
     width: 26px;
-    border-radius: 50%;
-    border: 2px solid transparent;
+    height: 26px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-radius: 50%;
+    border: 3px solid transparent;
   }
 
   &.correct {
     color: $success;
-    border: 2px solid $success;
+    border-color: $success;
   }
 
   &.incorrect {
     color: $danger;
-    border: 2px solid $danger;
+    border-color: $danger;
   }
 
   &.correct::after {
@@ -91,10 +95,10 @@
 
 .quiz__reaction {
   height: 60px;
-  padding: 0 30px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
   box-shadow: 0 -2px 3px 1px $bg-secondary;
 }
 
@@ -106,6 +110,7 @@
 .quiz__que-passed,
 .quiz__que-count {
   font-weight: 600;
+  white-space: pre-wrap;
 }
 
 .quiz__btn-result {
