@@ -1,14 +1,15 @@
+import { initialTime } from '../index.js';
+
 const timeLine = document.querySelector('.quiz__timeline ');
 const timeLineWidth = document.querySelector('.quiz__header').offsetWidth;
 let counter;
-const totalTime = 15;
-export let timeValue = null;
+let timeValue = null;
 
 export function startTimeLine() {
   timeValue = 0;
   counter = setInterval(() => {
     ++timeValue;
-    if (timeValue > totalTime * 100) {
+    if (timeValue > initialTime * 100) {
       stopTimeLine();
       return;
     }
@@ -22,5 +23,5 @@ export function stopTimeLine() {
 }
 
 function frame(time) {
-  timeLine.style.width = (time * timeLineWidth) / totalTime / 100 + 'px';
+  timeLine.style.width = (time * timeLineWidth) / initialTime / 100 + 'px';
 }

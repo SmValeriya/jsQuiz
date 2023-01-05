@@ -15,6 +15,7 @@ const greetingBox = document.querySelector('.greeting');
 const infoBox = document.querySelector('.info');
 const quizBox = document.querySelector('.quiz');
 const resultBox = document.querySelector('.result');
+export const initialTime = 15;
 
 document.addEventListener('DOMContentLoaded', function () {
   initializeTheme();

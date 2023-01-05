@@ -1,9 +1,10 @@
+import { initialTime } from '../index.js';
+
 const timeCount = document.querySelector('.timer__time');
-let counter;
-const initialTime = 15;
 const event = new Event('timeup');
 const timerTextBox = document.querySelector('.timer__text');
-export let timeValue = null;
+let counter;
+let timeValue = null;
 
 export function startTimer() {
   timerTextBox.textContent = 'Time Left';

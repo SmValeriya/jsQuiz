@@ -1,6 +1,7 @@
 import { questions } from './questions.js';
 
 const quizBox = document.querySelector('.quiz');
+let shuffledQuestions = [];
 const nextBtn = quizBox.querySelector('.quiz__btn-next');
 export let rightAnswersCount = 0;
 export let questionIndex;
@@ -10,7 +11,8 @@ export function initializeQuiz() {
 
   questionIndex = 0;
   rightAnswersCount = 0;
-  quizCountBox.textContent = ` ${questions.length} `;
+  shuffledQuestions = shuffleArray(questions);
+  quizCountBox.textContent = ` ${shuffledQuestions.length} `;
   quizBox.querySelector('.quiz__btn-result').style.display = 'none';
   renderQuestion(questionIndex);
   updateCountCurrentQuestion();
@@ -23,10 +25,15 @@ function renderQuestion(index) {
 
   questionOptList.classList.remove('disable');
 
-  questionText.textContent = index + 1 + '. ' + questions[index].question;
+  questionText.textContent =
+    index + 1 + '. ' + shuffledQuestions[index].question;
+
+  shuffledQuestions[index].options = shuffleArray(
+    shuffledQuestions[index].options,
+  );
   questionOptList.textContent = '';
 
-  questions[index].options.forEach(option => {
+  shuffledQuestions[index].options.forEach(option => {
     const li = document.createElement('li');
     li.classList.add('quiz__ans-list-item');
     li.textContent = option;
@@ -48,15 +55,15 @@ export function showQuestionResult(element) {
 
   questionOptList.classList.add('disable');
 
-  if (questionIndex < questions.length - 1) {
+  if (questionIndex < shuffledQuestions.length - 1) {
     activeNextBtn();
   }
 
-  if (questionIndex === questions.length - 1) {
+  if (questionIndex === shuffledQuestions.length - 1) {
     quizBox.querySelector('.quiz__btn-result').style.display = 'block';
   }
 
-  if (element?.textContent === questions[questionIndex].answer) {
+  if (element?.textContent === shuffledQuestions[questionIndex].answer) {
     element.classList.add('correct');
     rightAnswersCount++;
     return;
@@ -65,7 +72,7 @@ export function showQuestionResult(element) {
   element?.classList.add('incorrect');
   const optionsElemList = quizBox.querySelectorAll('.quiz__ans-list-item');
   optionsElemList.forEach(option => {
-    if (option.textContent === questions[questionIndex].answer) {
+    if (option.textContent === shuffledQuestions[questionIndex].answer) {
       option.classList.add('correct');
     }
   });
@@ -82,4 +89,17 @@ function disableNextBtn() {
 
 function activeNextBtn() {
   nextBtn.style.display = 'block';
+}
+
+function shuffleArray(array) {
+  const shuffledArray = [];
+
+  while (shuffledArray.length < array.length) {
+    const random = array[Math.floor(Math.random() * array.length)];
+    if (!shuffledArray.includes(random)) {
+      shuffledArray.push(random);
+    }
+  }
+
+  return shuffledArray;
 }
