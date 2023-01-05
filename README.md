@@ -1,4 +1,11 @@
-# Стартовий шаблон для розробки з використанням gulp
+# Навчальна вікторіна на js з js-технології
+## Контакти
+
+**E-mail:** [valeriasmyrnova@gmail.com](mailto:valeriasmyrnova@gmail.com)
+
+**Telegram** [@smvaleria](https://t.me/smvaleria)
+
+**Подивитись, як працює:** [https://smvaleriya.github.io/jsQuiz/build/index.html](https://smvaleriya.github.io/jsQuiz/build/index.html)
 
 ## Викоростанні технології
 
