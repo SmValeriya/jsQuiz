@@ -9,7 +9,6 @@ import {
 import { renderResults } from './common/result.js';
 import { questions } from './common/questions.js';
 import { startTimer, stopTimer } from './common/timer.js';
-import { startTimeLine, stopTimeLine } from './common/timeLine.js';
 
 const greetingBox = document.querySelector('.greeting');
 const infoBox = document.querySelector('.info');
@@ -43,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
       quizBox.classList.add('active');
       initializeQuiz();
       startTimer();
-      startTimeLine();
     }
   });
 
@@ -53,15 +51,12 @@ document.addEventListener('DOMContentLoaded', function () {
       questions.length - 1 > questionIndex
     ) {
       stopTimer();
-      stopTimeLine();
       showNextQuestion();
       startTimer();
-      startTimeLine();
     }
 
     if (e.target.closest('.quiz__ans-list-item')) {
       stopTimer();
-      stopTimeLine();
       showQuestionResult(e.target);
     }
 
@@ -83,7 +78,6 @@ document.addEventListener('DOMContentLoaded', function () {
       quizBox.classList.add('active');
       initializeQuiz();
       startTimer();
-      startTimeLine();
     }
   });
 });
